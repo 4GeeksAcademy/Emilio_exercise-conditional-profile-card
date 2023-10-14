@@ -31,25 +31,24 @@ function render(variables = {}) {
 
   // Name and Last name
   if (variables.name == null) variables.name = "Emilio";
-  if (variables.lastname == null) variables.lastName = "Di Bartolomeo";
+  if (variables.lastName == null) variables.lastName = "Di Bartolomeo";
 
   // Role
-  let userRole = "<h2>Web Developer</h2>";
-  if (variables.role == "Floor Planner") userRole = "<h2>Floor Planner</h2>";
-  else if (variables.role == "Technical Writter")
-    userRole = "<h2>Technical Writer</h2>";
-  else if (variables.role == null) userRole = "<h2>Role</h2>";
+
+  if (variables.role == null) variables.role = "Profession";
 
   // // Country & City
   if (variables.country == null) variables.country = "Country";
-  // else if (variables.country == "Germany") variables.country = "Germany";
-  // else if (variables.country == "Spain") variables.country = "Spain";
-  // else if (variables.country == "France") variables.country = "France";
-
   if (variables.city == null) variables.city = "city";
-  // else if (variables.city == "Madrid") variables.city == "Madrid";
-  // else if (variables.city == "Barcelona") variables.city == "Barcelona";
-  // else if (variables.city == "Huesca") variables.city == "Huesca";
+
+  //Social Media accounts
+  if (variables.twitter == null)
+    variables.twitter = "https://twitter.com/elonmusk";
+  if (variables.github == null) variables.github = "https://github.com/Emdihoy";
+  if (variables.linkedin == null)
+    variables.linkedin = "https://linkedin.com/school/emidbh124";
+  if (variables.instagram == null)
+    variables.instagram = "https://instagram.com/emdihoy";
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
@@ -59,10 +58,10 @@ function render(variables = {}) {
           <h2>${variables.role}</h2>
           <h3>${variables.country}, ${variables.city}</h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/elonmusk"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/Emdihoy"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/school/emidbh124"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/emdihoy"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
