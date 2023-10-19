@@ -30,25 +30,22 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   // Name and Last name
-  if (variables.name == null) variables.name = "Emilio";
-  if (variables.lastName == null) variables.lastName = "Di Bartolomeo";
+  if (variables.name == null) variables.name = "Dalai";
+  if (variables.lastName == null) variables.lastName = "Lama";
 
   // Role
 
-  if (variables.role == null) variables.role = "Profession";
+  if (variables.role == null) variables.role = "Meditation and deep thinking";
 
   // // Country & City
-  if (variables.country == null) variables.country = "Country";
-  if (variables.city == null) variables.city = "city";
+  if (variables.country == null) variables.country = "China";
+  if (variables.city == null) variables.city = "Tibet";
 
   //Social Media accounts
-  if (variables.twitter == null)
-    variables.twitter = "https://twitter.com/elonmusk";
-  if (variables.github == null) variables.github = "https://github.com/Emdihoy";
-  if (variables.linkedin == null)
-    variables.linkedin = "https://linkedin.com/school/emidbh124";
-  if (variables.instagram == null)
-    variables.instagram = "https://instagram.com/emdihoy";
+  if (variables.twitter == null) variables.twitter = "dalailama";
+  if (variables.github == null) variables.github = "dalailama";
+  if (variables.linkedin == null) variables.linkedin = "dalai-lama-fellows";
+  if (variables.instagram == null) variables.instagram = "dalailama";
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
@@ -58,10 +55,10 @@ function render(variables = {}) {
           <h2>${variables.role}</h2>
           <h3>${variables.country}, ${variables.city}</h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/elonmusk"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/Emdihoy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/emidbh124"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/emdihoy"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/${variables.twitter}"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${variables.github}"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/company/${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${variables.instagram}"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
